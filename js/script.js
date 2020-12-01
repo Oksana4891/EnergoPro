@@ -120,73 +120,77 @@
   
 
 
-//   function form() {
-//     const forms = document.querySelectorAll('form');
-//     const inputs = document.querySelectorAll('input');
-//     const formFile=document.getElementById("uploade-file");
-//     const previewFormFile = document.getElementById("uploade-filePreview");
-  
-//      console.log(formFile);
-//      console.log(previewFormFile);
+  function form() {
+    const forms = document.querySelectorAll('form');
+    const inputs = document.querySelectorAll('input');
+    const formFile=document.getElementById("uploade-file");
+    const previewFormFile = document.getElementById("uploade-filePreview");
+
+    let uploadImg = document.createElement('img');
+       uploadImg.classList.add('file-upload_input--img');
+       previewFormFile.appendChild(uploadImg);
+
+     formFile.addEventListener("change", () => { 
+       uploadFile(formFile.files[0]);
+     });
+
+    function uploadFile(file) {
+     
+     let reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e) {
+      uploadImg.classList.add("open");
+      uploadImg.src=e.target.result;
+      uploadImg.alt="Файл";
+      
+     };
+    }
 
 
-//      formFile.addEventListener("change", () => {
-//        uploadFile(formFile.files[0]);
-//        console.log(formFile.files[0]);
-//      });
-
-//     function uploadFile(file) {
-//      let reader= new FileReader();
-//      reader.onload = function(e) {
-//       previewFormFile.innerHTML=`<img scr="${e.target.result}" alt="Фото">`;
-//      };
-//     }
+    const message = {
+        loading: 'Загрузка...',
+        success: 'Спасибо! Скоро мы с вами свяжемся',
+        failure: 'Что-то пошло не так...',
+    };
 
 
-//     const message = {
-//         loading: 'Загрузка...',
-//         success: 'Спасибо! Скоро мы с вами свяжемся',
-//         failure: 'Что-то пошло не так...',
-//     };
+    forms.forEach(item => {
+        item.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(item);
 
-
-//     forms.forEach(item => {
-//         item.addEventListener('submit', (e) => {
-//             e.preventDefault();
-//             const formData = new FormData(item);
-//             // const object = {};
-
-//             let statusMessage = document.createElement('div');
-//             statusMessage.classList.add('status');
-//             item.appendChild(statusMessage);
-//             document.querySelector('.status').textContent = message.loading;
-
-        
-
-//             function clearInputs() {
-//                 inputs.forEach(item => item.value = '');
-//             }
+            let statusMessage = document.createElement('div');
+            statusMessage.classList.add('status');
+            item.appendChild(statusMessage);
+            
+            
+            function clearInputs() {
+                inputs.forEach(item => item.value = '');
+            }
+            
+            
 
 
 
-//             fetch("../telegram.php", {
-//                 method: 'POST',
-//                 body: formData
-//             }).then(data => {
-//                 statusMessage.textContent = message.success;
-//             }).catch(() => {
-//                 statusMessage.textContent = message.failure;
-//             }).finally(() => {
-//                 setTimeout(() => {
-//                     clearInputs();
-//                     statusMessage.remove();
+            fetch("../server.php", {
+                method: 'POST',
+                body: formData
+            }).then(data => {
+                statusMessage.textContent = message.success;
+            }).catch(() => {
+                statusMessage.textContent = message.failure;
+            }).finally(() => {
+                setTimeout(() => {
+                    clearInputs();
+                    statusMessage.remove();
+                    uploadImg.classList.remove("open");
 
-//                 }, 5000);
-//             });
-//         });
-//     });
-// }
+                }, 5000);
+            });
+        });
+    });
+}
 
   slides(".js-sliderList",".js-sliderItem",".js-sliderPrev",".js-sliderNext");
   lightbox(".js-sliderItem", ".js-lightbox", ".lightbox__image");
-  // form();
+  form();
