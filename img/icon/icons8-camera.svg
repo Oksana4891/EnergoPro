@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 10" width="12" height="10">
+	<defs>
+		<image width="12" height="10" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAYAAACALL/6AAABKUlEQVQoU1WQTStEcRTGf8+lKG9NpGwsxspuFhZWItfCZ1BK2VhbMVnIRlPyEexYsTGMjGlGSiGKryAlLyVvjZruozvu1PjvznnO73+e5wjgsFQaCiJlWhVVwjB8PTqpnNoeizVQBM5NT00s1auD4/JIIK7+RD4F94bhpH4B+v44bhWxpUKxXEPsYATMJL/uyT437kXBs/CsIVPnCsWygRLQAYwadiX2gU1MynAta8NiXXgwBt6AnsRCTXLWDhbB/UkPmYIDHjDzMfAOdCXij+2cpJXGcGLxRkQXRgsx8AF0Ng2sOl6N5pp68YVCYLKRoUnTk/BaDBmlA/kSq9uQbYQuA+P/LdSlO/A3KN2U50v5/Fmqpa22XD9h8gTtoAFJgU1V8Gio2tH2L4OAfV2bvCkEAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="icons8-camera" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>

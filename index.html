@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header_info row">
+          <div class="logo col-3 col-md-2">
+            <a class="logo_link" href="#header"
+              ><img class="logo_img" src="img/logo.svg" alt="logo"
+            /></a>
+          </div>
+          <div
+            class="header_contacts col-8 col-sm-9 col-md-10 col-lg-8 col-xl-7"
+          >
+            <a class="header_contacts--mail" href="mailto:info@compressorua.com"
+              >info@compressorua.com</a
+            >
+            <a class="header_contacts--tel" href="tel:+380503454030"
+              >050 345 4030</a
+            >
+            <a class="header_contacts--tel tel2" href="tel:+380675354030"
+              >067 535 4030</a
+            >
+          </div>
+        </div>
+        <div class="header_about row">
+          <div
+            class="header_about--text-block col-sm-12 col-md-9 col-lg-6 col-xl-7"
+          >
+            <h1 class="about_text-block--title title">
+              Безошибочный <span>подбор фильтров к компрессорам</span>
+            </h1>
+            <div class="about_text-block--block-left">
+              <p class="about_text-block--text">3 варианта на любой бюджет!</p>
+              <br />
+              <p class="about_text-block--text">Всего за 15 минут!</p>
+              <br />
+              <p class="about_text-block--text">
+                С консультацией сервис-инженера!
+              </p>
+            </div>
+            <img class="header-img" src="img/filter.png" alt="filter" />
+          </div>
+          <form
+            class="about_form form-selection col-10 offset-1 col-sm-7 offset-sm-5 col-md-5 offset-md-7 col-lg-5 offset-lg-0 col-xl-4"
+          >
+            <div class="form-selection_title">Подобрать фильтр</div>
+
+            <div class="file-upload">
+              <input
+                class="file-upload_input--photo"
+                id="uploade-filePreview"
+                type="text"
+                placeholder="Фото компрессора"
+                readonly
+              />
+              <label class="file-upload_label">
+                <input
+                  id="uploade-file"
+                  type="file"
+                  accept="image/*"
+                  name="file"
+                />
+                <span class="file-upload_btn"></span>
+              </label>
+            </div>
+            <input
+              class="input_filter-code"
+              type="text"
+              name="filter-code"
+              placeholder="Код фильтра"
+            />
+            <input
+              class="input_name"
+              type="text"
+              name="user-name"
+              placeholder="Ваше имя"
+            />
+            <input
+              class="input_phone"
+              type="number"
+              name="user-phone"
+              placeholder="Телефон для связи"
+            />
+            <button class="form-selection_btn" name="submit" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="arrows-btn animate__animated animate__fadeInDown animate__infinite animate__slower"
+      >
+        <a class="" href="#slider-leters">
+          <img src="img/icon/down.png" alt="" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="letters" id="slider-leters">
+        <div class="container">
+          <div class="letters_text-block row">
+            <h2
+              class="letters_text-block--title section_title col-12 col-sm-10 col-lg-8 col-xl-8"
+            >
+              нам доверяют тысячи украинскиих предприятий
+            </h2>
+
+            <div
+              class="letters_text-block--text col-5 offset-6 col-sm-5 offset-sm-7 col-md-4 offset-md-8 col-lg-3 col-xl-3"
+            >
+              90% в наличии на складе
+            </div>
+          </div>
+          <div class="letter_slider">
+            <div class="letter_slider--wrapper">
+              <ul class="letter_slider--list js-sliderList">
+                <li class="letter_slider--item js-sliderItem">
+                  <img
+                    class="letter_slider--img"
+                    data-source="img/list1-big.jpg"
+                    src="img/list1.jpg"
+                    alt="letter1"
+                  />
+                  <div class="letter_slider--overline">
+                    <div class="zoom">
+                      <img src="img/icon/zoom.svg" alt="zoom" />
+                    </div>
+                  </div>
+                </li>
+                <li class="letter_slider--item js-sliderItem">
+                  <img
+                    class="letter_slider--img"
+                    data-source="img/list1-big.jpg"
+                    src="img/list1.jpg"
+                    alt="letter2"
+                  />
+                  <div class="letter_slider--overline">
+                    <div class="zoom">
+                      <img src="img/icon/zoom.svg" alt="zoom" />
+                    </div>
+                  </div>
+                </li>
+                <li class="letter_slider--item js-sliderItem">
+                  <img
+                    class="letter_slider--img"
+                    data-source="img/list1-big.jpg"
+                    src="img/list1.jpg"
+                    alt="letter1"
+                  />
+                  <div class="letter_slider--overline">
+                    <div class="zoom">
+                      <img src="img/icon/zoom.svg" alt="zoom" />
+                    </div>
+                  </div>
+                </li>
+                <li class="letter_slider--item js-sliderItem">
+                  <img
+                    class="letter_slider--img"
+                    data-source="img/list1-big.jpg"
+                    src="img/list1.jpg"
+                    alt="letter1"
+                  />
+                  <div class="letter_slider--overline">
+                    <div class="zoom">
+                      <img src="img/icon/zoom.svg" alt="zoom" />
+                    </div>
+                  </div>
+                </li>
+                <li class="letter_slider--item js-sliderItem">
+                  <img
+                    class="letter_slider--img"
+                    data-source="img/list1-big.jpg"
+                    src="img/list1.jpg"
+                    alt="letter1"
+                  />
+                  <div class="letter_slider--overline">
+                    <div class="zoom">
+                      <img src="img/icon/zoom.svg" alt="zoom" />
+                    </div>
+                  </div>
+                </li>
+                <li class="letter_slider--item js-sliderItem">
+                  <img
+                    class="letter_slider--img"
+                    data-source="img/list1-big.jpg"
+                    src="img/list1.jpg"
+                    alt="letter1"
+                  />
+                  <div class="letter_slider--overline">
+                    <div class="zoom">
+                      <img src="img/icon/zoom.svg" alt="zoom" />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="letter_slider--btn arrow-left js-sliderPrev"></div>
+            <div class="letter_slider--btn arrow-right js-sliderNext"></div>
+            <div class="letter_slider--count">
+              <span id="curent-slider">2</span>
+              <span>/</span>
+              <span id="total-slider">6</span>
+            </div>
+          </div>
+        </div>
+        <!-- Модальное окно для полноразмерного изображения -->
+        <div class="lightbox js-lightbox">
+          <div class="lightbox__overlay"></div>
+          <div class="lightbox__content">
+            <img class="lightbox__image" src="" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <!-- <script src="js/script.js"></script> -->
+</html>
